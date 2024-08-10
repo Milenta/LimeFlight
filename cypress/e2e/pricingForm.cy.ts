@@ -64,7 +64,7 @@ describe("LimeFlight QA challenge tests", () => {
         "Number of guests / year",
         data.guests
       );
-      pricing.submitCheckErrorMessage("firstName");
+      pricing.submitCheckErrorMessage("form__Grid-sc-1ya1gja-2", "firstName");
     });
   });
 
@@ -87,7 +87,7 @@ describe("LimeFlight QA challenge tests", () => {
         "Number of guests / year",
         data.guests
       );
-      pricing.submitCheckErrorMessage("lastName");
+      pricing.submitCheckErrorMessage("form__Grid-sc-1ya1gja-2", "lastName");
     });
   });
 
@@ -110,7 +110,7 @@ describe("LimeFlight QA challenge tests", () => {
         "Number of guests / year",
         data.guests
       );
-      pricing.submitCheckErrorMessage("email");
+      pricing.submitCheckErrorMessage("form__Grid-sc-1ya1gja-2", "email");
     });
   });
 
@@ -133,7 +133,7 @@ describe("LimeFlight QA challenge tests", () => {
         "Number of guests / year",
         data.guests
       );
-      pricing.submitCheckErrorMessage("company");
+      pricing.submitCheckErrorMessage("form__Grid-sc-1ya1gja-2", "company");
     });
   });
 
@@ -423,5 +423,122 @@ describe("LimeFlight QA challenge tests", () => {
       }
     );
     pricing.checkValidationMessage();
+  });
+
+  it("Validate price factors fields are filled out in pricing form", () => {
+    cy.visit("https://test.limeflight.com/pricing/");
+    cy.fixture("pricingFormData").then((data: pricingData) => {
+      pricing.pricingFormInputUserData("firstName", data.firstName);
+      pricing.pricingFormInputUserData("lastName", data.lastName);
+      pricing.pricingFormInputUserData("email", data.email);
+      pricing.pricingFormInputUserData("company", data.company);
+      pricing.pricingFormInputUserData("message", data.message);
+
+      pricing.pricingFormInputPriceFactors(
+        "Number of aircrafts",
+        data.numAircrafts
+      );
+      pricing.pricingFormInputPriceFactors(
+        "One-way flights / year",
+        data.oneWayFlights
+      );
+      pricing.pricingFormInputPriceFactors(
+        "Number of guests / year",
+        data.guests
+      );
+
+      pricing.clickButton("Get Price");
+
+      cy.intercept(
+        "POST",
+        "https://api.hsforms.com/submissions/v3/integration/submit/4314722/f182c59e-6cdc-4ce2-ba39-87f6114165f3",
+        (req) => {
+          const { body } = req;
+          expect(body.fields[10].value).to.eq(data.numAircrafts);
+          expect(body.fields[11].value).to.eq(data.oneWayFlights);
+          expect(body.fields[12].value).to.eq(data.guests);
+        }
+      );
+    });
+    pricing.checkValidationMessage();
+  });
+
+  it("Validate Number of aircrafts price factor field error message in pricing form", () => {
+    cy.visit("https://test.limeflight.com/pricing/");
+    cy.fixture("pricingFormData").then((data: pricingData) => {
+      pricing.pricingFormInputUserData("firstName", data.firstName);
+      pricing.pricingFormInputUserData("lastName", data.lastName);
+      pricing.pricingFormInputUserData("email", data.email);
+      pricing.pricingFormInputUserData("company", data.company);
+      pricing.pricingFormInputUserData("message", data.message);
+
+      pricing.pricingFormInputPriceFactors(
+        "One-way flights / year",
+        data.oneWayFlights
+      );
+      pricing.pricingFormInputPriceFactors(
+        "Number of guests / year",
+        data.guests
+      );
+    });
+
+    pricing.submitCheckErrorMessage(
+      "form__PriceFactor-sc-1ya1gja-4",
+      "Number of aircrafts"
+    );
+  });
+
+  it("Validate One-way flights per year price factor field error message in pricing form", () => {
+    cy.visit("https://test.limeflight.com/pricing/");
+    cy.fixture("pricingFormData").then((data: pricingData) => {
+      pricing.pricingFormInputUserData("firstName", data.firstName);
+      pricing.pricingFormInputUserData("lastName", data.lastName);
+      pricing.pricingFormInputUserData("email", data.email);
+      pricing.pricingFormInputUserData("company", data.company);
+      pricing.pricingFormInputUserData("message", data.message);
+
+      pricing.pricingFormInputPriceFactors(
+        "Number of aircrafts",
+        data.numAircrafts
+      );
+      // pricing.pricingFormInputPriceFactors(
+      //   "One-way flights / year",
+      //   data.oneWayFlights
+      // );
+      pricing.pricingFormInputPriceFactors(
+        "Number of guests / year",
+        data.guests
+      );
+    });
+
+    pricing.submitCheckErrorMessage(
+      "form__PriceFactor-sc-1ya1gja-4",
+      "One-way flights / year"
+    );
+  });
+
+  it("Validate Number of guests per year price factor field error message in pricing form", () => {
+    cy.visit("https://test.limeflight.com/pricing/");
+    cy.fixture("pricingFormData").then((data: pricingData) => {
+      pricing.pricingFormInputUserData("firstName", data.firstName);
+      pricing.pricingFormInputUserData("lastName", data.lastName);
+      pricing.pricingFormInputUserData("email", data.email);
+      pricing.pricingFormInputUserData("company", data.company);
+      pricing.pricingFormInputUserData("message", data.message);
+
+      pricing.pricingFormInputPriceFactors(
+        "Number of aircrafts",
+        data.numAircrafts
+      );
+      pricing.pricingFormInputPriceFactors(
+        "One-way flights / year",
+        data.oneWayFlights
+      );
+    });
+
+    pricing.submitCheckErrorMessage(
+      "form__PriceFactor-sc-1ya1gja-4",
+      "Number of guests / year"
+    );
   });
 });

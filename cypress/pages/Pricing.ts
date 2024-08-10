@@ -5,14 +5,14 @@ export class Pricing {
   pricingFormInputPriceFactors(selector: string, name: string): void {
     cy.get(`[name="${selector}"]`).type(name);
   }
-  checkErrorMessage(name: string): void {
-    cy.get(`.form__Grid-sc-1ya1gja-2 [name="${name}"]`)
+  checkErrorMessage(className: string, name: string): void {
+    cy.get(`.${className} [name="${name}"]`) //.form__Grid-sc-1ya1gja-2
       .invoke("prop", "validationMessage")
       .should("equal", "Please fill out this field.");
   }
-  submitCheckErrorMessage(name: string): void {
+  submitCheckErrorMessage(className: string, name: string): void {
     cy.get("button").contains("Get Price").click();
-    this.checkErrorMessage(name);
+    this.checkErrorMessage(className, name);
   }
   checkValidationMessage(): void {
     cy.get("header").contains("Thanks!").should("be.visible");
