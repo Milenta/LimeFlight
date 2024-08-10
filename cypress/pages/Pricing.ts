@@ -18,4 +18,11 @@ export class Pricing {
     cy.get("header").contains("Thanks!").should("be.visible");
     cy.get("div").contains("We'll be right with you.").should("be.visible");
   }
+  clickButton(name: string): void {
+    cy.get("button").contains(name).click();
+  }
+  selectModule(name: string, isChecked: string): void {
+    cy.get(`.form__Grid-sc-1ya1gja-2 [name="${name}"]`).click({ force: true });
+    cy.get(`.form__Grid-sc-1ya1gja-2 [name="${name}"]`).should(isChecked);
+  }
 }
