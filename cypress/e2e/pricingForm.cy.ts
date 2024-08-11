@@ -501,10 +501,6 @@ describe("LimeFlight QA challenge tests", () => {
         "Number of aircrafts",
         data.numAircrafts
       );
-      // pricing.pricingFormInputPriceFactors(
-      //   "One-way flights / year",
-      //   data.oneWayFlights
-      // );
       pricing.pricingFormInputPriceFactors(
         "Number of guests / year",
         data.guests
@@ -540,5 +536,12 @@ describe("LimeFlight QA challenge tests", () => {
       "form__PriceFactor-sc-1ya1gja-4",
       "Number of guests / year"
     );
+  });
+
+  it.only("Validate checkbox for newsletters or offers in pricing form", () => {
+    cy.visit("https://test.limeflight.com/pricing/");
+
+    pricing.clickCheckboxAndValidate("not.be.checked");
+    pricing.clickCheckboxAndValidate("be.checked");
   });
 });

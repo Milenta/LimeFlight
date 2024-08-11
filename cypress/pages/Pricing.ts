@@ -25,4 +25,17 @@ export class Pricing {
     cy.get(`.form__Grid-sc-1ya1gja-2 [name="${name}"]`).click({ force: true });
     cy.get(`.form__Grid-sc-1ya1gja-2 [name="${name}"]`).should(isChecked);
   }
+  clickCheckboxAndValidate(checked: string): void {
+    cy.get(".title-section__FormWrapper-sc-1wdc3q2-2 p")
+      .contains("You can unsubscribe")
+      .prev()
+      .children()
+      .click({ force: true });
+    cy.get(".title-section__FormWrapper-sc-1wdc3q2-2 p")
+      .contains("You can unsubscribe")
+      .prev()
+      .children()
+      .children()
+      .should(checked);
+  }
 }
