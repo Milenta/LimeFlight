@@ -6,13 +6,15 @@
   "scripts": {
     "all": "npx cypress run --browser chrome",
     "contactForm": "npx cypress run --browser chrome --spec 'cypress/e2e/contactForm.cy.ts'",
-    "pricingForm": "npx cypress run --browser chrome --spec 'cypress/e2e/pricingForm.cy.ts'"
+    "pricingForm": "npx cypress run --browser chrome --spec 'cypress/e2e/pricingForm.cy.ts'",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "Marko Milentijevic",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.13.2",
+    "husky": "^9.1.4",
     "typescript": "^5.5.4"
   }
 }
