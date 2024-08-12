@@ -4,7 +4,9 @@
   "description": "LimeFlight Challenge QA",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "all": "npx cypress run --browser chrome",
+    "contactForm": "npx cypress run --browser chrome --spec 'cypress/e2e/contactForm.cy.ts'",
+    "pricingForm": "npx cypress run --browser chrome --spec 'cypress/e2e/pricingForm.cy.ts'"
   },
   "keywords": [],
   "author": "Marko Milentijevic",
