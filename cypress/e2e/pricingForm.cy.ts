@@ -2,7 +2,7 @@ import type { pricingData } from "./pricing"; // import interface
 import { Pricing } from "../pages/Pricing"; // import class
 const pricing = new Pricing(); // new instance of class
 
-describe("LimeFlight QA challenge tests", () => {
+describe("LimeFlight QA challenge tests - pricing form", () => {
   beforeEach(() => {
     cy.viewport(1920, 1080);
   });
@@ -64,7 +64,11 @@ describe("LimeFlight QA challenge tests", () => {
         "Number of guests / year",
         data.guests
       );
-      pricing.submitCheckErrorMessage("form__Grid-sc-1ya1gja-2", "firstName");
+      pricing.submitCheckErrorMessage(
+        "form__Grid-sc-1ya1gja-2",
+        "firstName",
+        "Get Price"
+      );
     });
   });
 
@@ -87,7 +91,11 @@ describe("LimeFlight QA challenge tests", () => {
         "Number of guests / year",
         data.guests
       );
-      pricing.submitCheckErrorMessage("form__Grid-sc-1ya1gja-2", "lastName");
+      pricing.submitCheckErrorMessage(
+        "form__Grid-sc-1ya1gja-2",
+        "lastName",
+        "Get Price"
+      );
     });
   });
 
@@ -110,7 +118,11 @@ describe("LimeFlight QA challenge tests", () => {
         "Number of guests / year",
         data.guests
       );
-      pricing.submitCheckErrorMessage("form__Grid-sc-1ya1gja-2", "email");
+      pricing.submitCheckErrorMessage(
+        "form__Grid-sc-1ya1gja-2",
+        "email",
+        "Get Price"
+      );
     });
   });
 
@@ -133,7 +145,11 @@ describe("LimeFlight QA challenge tests", () => {
         "Number of guests / year",
         data.guests
       );
-      pricing.submitCheckErrorMessage("form__Grid-sc-1ya1gja-2", "company");
+      pricing.submitCheckErrorMessage(
+        "form__Grid-sc-1ya1gja-2",
+        "company",
+        "Get Price"
+      );
     });
   });
 
@@ -187,11 +203,31 @@ describe("LimeFlight QA challenge tests", () => {
       pricing.pricingFormInputUserData("company", data.company);
       pricing.pricingFormInputUserData("message", data.message);
 
-      pricing.selectModule("LoadPlanning", "not.be.checked");
-      pricing.selectModule("MealPlanning", "not.be.checked");
-      pricing.selectModule("MobileApp", "not.be.checked");
-      pricing.selectModule("InventoryManagement", "not.be.checked");
-      pricing.selectModule("RouteOptimization", "not.be.checked");
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "LoadPlanning",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "MealPlanning",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "MobileApp",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "InventoryManagement",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "RouteOptimization",
+        "not.be.checked"
+      );
 
       pricing.pricingFormInputPriceFactors(
         "Number of aircrafts",
@@ -229,11 +265,31 @@ describe("LimeFlight QA challenge tests", () => {
       pricing.pricingFormInputUserData("company", data.company);
       pricing.pricingFormInputUserData("message", data.message);
 
-      pricing.selectModule("Platform", "not.be.checked");
-      pricing.selectModule("MealPlanning", "not.be.checked");
-      pricing.selectModule("MobileApp", "not.be.checked");
-      pricing.selectModule("InventoryManagement", "not.be.checked");
-      pricing.selectModule("RouteOptimization", "not.be.checked");
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "Platform",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "MealPlanning",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "MobileApp",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "InventoryManagement",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "RouteOptimization",
+        "not.be.checked"
+      );
 
       pricing.pricingFormInputPriceFactors(
         "Number of aircrafts",
@@ -270,11 +326,31 @@ describe("LimeFlight QA challenge tests", () => {
       pricing.pricingFormInputUserData("company", data.company);
       pricing.pricingFormInputUserData("message", data.message);
 
-      pricing.selectModule("Platform", "not.be.checked");
-      pricing.selectModule("LoadPlanning", "not.be.checked");
-      pricing.selectModule("MobileApp", "not.be.checked");
-      pricing.selectModule("InventoryManagement", "not.be.checked");
-      pricing.selectModule("RouteOptimization", "not.be.checked");
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "Platform",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "LoadPlanning",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "MobileApp",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "InventoryManagement",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "RouteOptimization",
+        "not.be.checked"
+      );
 
       pricing.pricingFormInputPriceFactors(
         "Number of aircrafts",
@@ -311,11 +387,31 @@ describe("LimeFlight QA challenge tests", () => {
       pricing.pricingFormInputUserData("company", data.company);
       pricing.pricingFormInputUserData("message", data.message);
 
-      pricing.selectModule("Platform", "not.be.checked");
-      pricing.selectModule("LoadPlanning", "not.be.checked");
-      pricing.selectModule("MealPlanning", "not.be.checked");
-      pricing.selectModule("InventoryManagement", "not.be.checked");
-      pricing.selectModule("RouteOptimization", "not.be.checked");
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "Platform",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "LoadPlanning",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "MealPlanning",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "InventoryManagement",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "RouteOptimization",
+        "not.be.checked"
+      );
 
       pricing.pricingFormInputPriceFactors(
         "Number of aircrafts",
@@ -352,11 +448,31 @@ describe("LimeFlight QA challenge tests", () => {
       pricing.pricingFormInputUserData("company", data.company);
       pricing.pricingFormInputUserData("message", data.message);
 
-      pricing.selectModule("Platform", "not.be.checked");
-      pricing.selectModule("LoadPlanning", "not.be.checked");
-      pricing.selectModule("MealPlanning", "not.be.checked");
-      pricing.selectModule("MobileApp", "not.be.checked");
-      pricing.selectModule("RouteOptimization", "not.be.checked");
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "Platform",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "LoadPlanning",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "MealPlanning",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "MobileApp",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "RouteOptimization",
+        "not.be.checked"
+      );
 
       pricing.pricingFormInputPriceFactors(
         "Number of aircrafts",
@@ -393,11 +509,31 @@ describe("LimeFlight QA challenge tests", () => {
       pricing.pricingFormInputUserData("company", data.company);
       pricing.pricingFormInputUserData("message", data.message);
 
-      pricing.selectModule("Platform", "not.be.checked");
-      pricing.selectModule("LoadPlanning", "not.be.checked");
-      pricing.selectModule("MealPlanning", "not.be.checked");
-      pricing.selectModule("MobileApp", "not.be.checked");
-      pricing.selectModule("InventoryManagement", "not.be.checked");
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "Platform",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "LoadPlanning",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "MealPlanning",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "MobileApp",
+        "not.be.checked"
+      );
+      pricing.selectModule(
+        "form__Grid-sc-1ya1gja-2",
+        "InventoryManagement",
+        "not.be.checked"
+      );
 
       pricing.pricingFormInputPriceFactors(
         "Number of aircrafts",
@@ -484,7 +620,8 @@ describe("LimeFlight QA challenge tests", () => {
 
     pricing.submitCheckErrorMessage(
       "form__PriceFactor-sc-1ya1gja-4",
-      "Number of aircrafts"
+      "Number of aircrafts",
+      "Get Price"
     );
   });
 
@@ -509,7 +646,8 @@ describe("LimeFlight QA challenge tests", () => {
 
     pricing.submitCheckErrorMessage(
       "form__PriceFactor-sc-1ya1gja-4",
-      "One-way flights / year"
+      "One-way flights / year",
+      "Get Price"
     );
   });
 
@@ -534,7 +672,8 @@ describe("LimeFlight QA challenge tests", () => {
 
     pricing.submitCheckErrorMessage(
       "form__PriceFactor-sc-1ya1gja-4",
-      "Number of guests / year"
+      "Number of guests / year",
+      "Get Price"
     );
   });
 
