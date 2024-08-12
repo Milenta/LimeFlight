@@ -2,6 +2,13 @@ export class Pricing {
   pricingFormInputUserData(selector: string, name: string): void {
     cy.get(`.form__Grid-sc-1ya1gja-2 [name="${selector}"]`).type(name);
   }
+  pricingValidateUserInput(name: string, userData: string): void {
+    cy.get(`.form__Grid-sc-1ya1gja-2 [name="${name}"]`)
+      .invoke("val")
+      .then((text) => {
+        expect(text).to.eq(userData);
+      });
+  }
   pricingFormInputPriceFactors(selector: string, name: string): void {
     cy.get(`[name="${selector}"]`).type(name);
   }

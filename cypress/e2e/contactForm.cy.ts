@@ -132,7 +132,6 @@ describe("LimeFlight QA challenge tests - contact form", () => {
         "RouteOptimization",
         "not.be.checked"
       );
-
       pricing.selectModule("form__Grid-sc-1y50ako-3", "Platform", "be.checked");
       pricing.selectModule(
         "form__Grid-sc-1y50ako-3",
