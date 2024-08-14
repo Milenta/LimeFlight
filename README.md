@@ -15,3 +15,8 @@ To run project localy execute next steps:
 - npm run all
 - npm run contactForm
 - npm run pricingForm
+
+#Best practices
+
+- use prettier to check is your code clean npm run prettier:check
+- format project with prettier npm run prettier:write
