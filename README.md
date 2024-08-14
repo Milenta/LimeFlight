@@ -1,8 +1,8 @@
-**Description**
+## Description
 
 This project is created in order to solve LimeFlight TakeHome Challenge QA
 
-**Priject set up**
+## Priject set up
 
 To run project localy execute next steps:
 
@@ -16,7 +16,7 @@ To run project localy execute next steps:
 - npm run contactForm
 - npm run pricingForm
 
-**Best practices**
+## Best practices
 
-- use prettier to check is your code clean <span style="color: green"> npm run prettier:check </span>
-- format project with prettier <span style="color: green"> npm run prettier:write </span>
+- use prettier to check is your code clean $${\color{red}npm}$$ $${\color{red}run}$$ $${\color{red}prettier:check}$$
+- format project with prettier $${\color{red}npm}$$ $${\color{red}run}$$ $${\color{red}prettier:write}$$
