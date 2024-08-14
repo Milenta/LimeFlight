@@ -1,12 +1,12 @@
-#Description
+**Description**
 
 This project is created in order to solve LimeFlight TakeHome Challenge QA
 
-#Priject set up
+**Priject set up**
 
 To run project localy execute next steps:
 
-1. Install node.js (node version used 16.13.0)
+1. Install node.js (node version used 18.14.0)
 2. Clone Git project to your PC
 3. Open it in IDE
 4. Install dependencies with command : npm ci
@@ -16,7 +16,7 @@ To run project localy execute next steps:
 - npm run contactForm
 - npm run pricingForm
 
-#Best practices
+**Best practices**
 
-- use prettier to check is your code clean npm run prettier:check
-- format project with prettier npm run prettier:write
+- use prettier to check is your code clean <span style="color: green"> npm run prettier:check </span>
+- format project with prettier <span style="color: green"> npm run prettier:write </span>
