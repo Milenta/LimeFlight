@@ -32,20 +32,20 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         pricing.pricingFormInputUserData("message", data.message);
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
         pricing.submitCheckErrorMessage(
           "form__Grid-sc-1ya1gja-2",
           "firstName",
-          "Get Price"
+          "Get Price",
         );
       });
     });
@@ -59,20 +59,20 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         pricing.pricingFormInputUserData("message", data.message);
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
         pricing.submitCheckErrorMessage(
           "form__Grid-sc-1ya1gja-2",
           "lastName",
-          "Get Price"
+          "Get Price",
         );
       });
     });
@@ -86,20 +86,20 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         pricing.pricingFormInputUserData("message", data.message);
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
         pricing.submitCheckErrorMessage(
           "form__Grid-sc-1ya1gja-2",
           "email",
-          "Get Price"
+          "Get Price",
         );
       });
     });
@@ -113,20 +113,20 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         pricing.pricingFormInputUserData("message", data.message);
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
         pricing.submitCheckErrorMessage(
           "form__Grid-sc-1ya1gja-2",
           "company",
-          "Get Price"
+          "Get Price",
         );
       });
     });
@@ -135,58 +135,58 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
       pricing.selectModule(
         "form__Grid-sc-1ya1gja-2",
         "Platform",
-        "not.be.checked"
+        "not.be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1ya1gja-2",
         "LoadPlanning",
-        "not.be.checked"
+        "not.be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1ya1gja-2",
         "MealPlanning",
-        "not.be.checked"
+        "not.be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1ya1gja-2",
         "MobileApp",
-        "not.be.checked"
+        "not.be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1ya1gja-2",
         "InventoryManagement",
-        "not.be.checked"
+        "not.be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1ya1gja-2",
         "RouteOptimization",
-        "not.be.checked"
+        "not.be.checked",
       );
       pricing.selectModule("form__Grid-sc-1ya1gja-2", "Platform", "be.checked");
       pricing.selectModule(
         "form__Grid-sc-1ya1gja-2",
         "LoadPlanning",
-        "be.checked"
+        "be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1ya1gja-2",
         "MealPlanning",
-        "be.checked"
+        "be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1ya1gja-2",
         "MobileApp",
-        "be.checked"
+        "be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1ya1gja-2",
         "InventoryManagement",
-        "be.checked"
+        "be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1ya1gja-2",
         "RouteOptimization",
-        "be.checked"
+        "be.checked",
       );
     });
     it("Validate checkbox for newsletters or offers in pricing form", () => {
@@ -206,18 +206,18 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
 
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
       });
 
       pricing.submitCheckErrorMessage(
         "form__PriceFactor-sc-1ya1gja-4",
         "Number of aircrafts",
-        "Get Price"
+        "Get Price",
       );
     });
 
@@ -232,18 +232,18 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
 
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
       });
 
       pricing.submitCheckErrorMessage(
         "form__PriceFactor-sc-1ya1gja-4",
         "One-way flights / year",
-        "Get Price"
+        "Get Price",
       );
     });
 
@@ -258,18 +258,18 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
 
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
       });
 
       pricing.submitCheckErrorMessage(
         "form__PriceFactor-sc-1ya1gja-4",
         "Number of guests / year",
-        "Get Price"
+        "Get Price",
       );
     });
   });
@@ -284,15 +284,15 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         pricing.pricingFormInputUserData("message", data.message);
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
 
         cy.get("button").contains("Get Price").click();
@@ -306,7 +306,7 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
             expect(body.fields[1].value).to.eq(data.firstName);
             expect(body.fields[2].value).to.eq(data.lastName);
             expect(body.fields[3].value).to.eq(data.company);
-          }
+          },
         );
       });
       pricing.checkValidationMessage();
@@ -322,15 +322,15 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
 
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
       });
       pricing.clickButton("Get Price");
@@ -346,7 +346,7 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
           expect(body.fields[7].value).to.eq("MobileApp");
           expect(body.fields[8].value).to.eq("InventoryManagement");
           expect(body.fields[9].value).to.eq("RouteOptimization");
-        }
+        },
       );
 
       pricing.checkValidationMessage();
@@ -364,40 +364,40 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "LoadPlanning",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "MealPlanning",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "MobileApp",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "InventoryManagement",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "RouteOptimization",
-          "not.be.checked"
+          "not.be.checked",
         );
 
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
       });
       pricing.clickButton("Get Price");
@@ -408,7 +408,7 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         (req) => {
           const { body } = req;
           expect(body.fields[4].value).to.eq("Platform");
-        }
+        },
       );
 
       pricing.checkValidationMessage();
@@ -426,40 +426,40 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "Platform",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "MealPlanning",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "MobileApp",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "InventoryManagement",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "RouteOptimization",
-          "not.be.checked"
+          "not.be.checked",
         );
 
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
       });
       pricing.clickButton("Get Price");
@@ -470,7 +470,7 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         (req) => {
           const { body } = req;
           expect(body.fields[4].value).to.eq("LoadPlanning");
-        }
+        },
       );
       pricing.checkValidationMessage();
     });
@@ -487,40 +487,40 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "Platform",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "LoadPlanning",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "MobileApp",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "InventoryManagement",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "RouteOptimization",
-          "not.be.checked"
+          "not.be.checked",
         );
 
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
       });
       pricing.clickButton("Get Price");
@@ -531,7 +531,7 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         (req) => {
           const { body } = req;
           expect(body.fields[4].value).to.eq("MealPlanning");
-        }
+        },
       );
       pricing.checkValidationMessage();
     });
@@ -548,40 +548,40 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "Platform",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "LoadPlanning",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "MealPlanning",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "InventoryManagement",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "RouteOptimization",
-          "not.be.checked"
+          "not.be.checked",
         );
 
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
       });
       pricing.clickButton("Get Price");
@@ -592,7 +592,7 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         (req) => {
           const { body } = req;
           expect(body.fields[4].value).to.eq("MobileApp");
-        }
+        },
       );
       pricing.checkValidationMessage();
     });
@@ -609,40 +609,40 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "Platform",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "LoadPlanning",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "MealPlanning",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "MobileApp",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "RouteOptimization",
-          "not.be.checked"
+          "not.be.checked",
         );
 
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
       });
       pricing.clickButton("Get Price");
@@ -653,7 +653,7 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         (req) => {
           const { body } = req;
           expect(body.fields[4].value).to.eq("InventoryManagement");
-        }
+        },
       );
       pricing.checkValidationMessage();
     });
@@ -670,40 +670,40 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "Platform",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "LoadPlanning",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "MealPlanning",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "MobileApp",
-          "not.be.checked"
+          "not.be.checked",
         );
         pricing.selectModule(
           "form__Grid-sc-1ya1gja-2",
           "InventoryManagement",
-          "not.be.checked"
+          "not.be.checked",
         );
 
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
       });
       pricing.clickButton("Get Price");
@@ -714,7 +714,7 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
         (req) => {
           const { body } = req;
           expect(body.fields[4].value).to.eq("RouteOptimization");
-        }
+        },
       );
       pricing.checkValidationMessage();
     });
@@ -729,15 +729,15 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
 
         pricing.pricingFormInputPriceFactors(
           "Number of aircrafts",
-          data.numAircrafts
+          data.numAircrafts,
         );
         pricing.pricingFormInputPriceFactors(
           "One-way flights / year",
-          data.oneWayFlights
+          data.oneWayFlights,
         );
         pricing.pricingFormInputPriceFactors(
           "Number of guests / year",
-          data.guests
+          data.guests,
         );
 
         pricing.clickButton("Get Price");
@@ -750,7 +750,7 @@ describe("LimeFlight QA challenge tests - pricing form", () => {
             expect(body.fields[10].value).to.eq(data.numAircrafts);
             expect(body.fields[11].value).to.eq(data.oneWayFlights);
             expect(body.fields[12].value).to.eq(data.guests);
-          }
+          },
         );
       });
       pricing.checkValidationMessage();

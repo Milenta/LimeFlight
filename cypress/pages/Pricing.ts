@@ -20,7 +20,7 @@ export class Pricing {
   submitCheckErrorMessage(
     className: string,
     name: string,
-    button: string
+    button: string,
   ): void {
     cy.get("button").contains(button).click();
     this.checkErrorMessage(className, name);

@@ -7,7 +7,9 @@
     "all": "npx cypress run --browser chrome",
     "contactForm": "npx cypress run --browser chrome --spec 'cypress/e2e/contactForm.cy.ts'",
     "pricingForm": "npx cypress run --browser chrome --spec 'cypress/e2e/pricingForm.cy.ts'",
-    "prepare": "husky"
+    "prepare": "husky",
+    "prettier:write": "prettier --write .",
+    "prettier:check": "prettier --check ./"
   },
   "keywords": [],
   "author": "Marko Milentijevic",
@@ -16,5 +18,8 @@
     "cypress": "^13.13.2",
     "husky": "^9.1.4",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "prettier": "^3.3.3"
   }
 }

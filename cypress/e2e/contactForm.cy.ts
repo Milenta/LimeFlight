@@ -39,7 +39,7 @@ describe("LimeFlight QA challenge tests - contact form", () => {
         pricing.submitCheckErrorMessage(
           "form__Grid-sc-1y50ako-3",
           "firstName",
-          "Get Started"
+          "Get Started",
         );
       });
     });
@@ -56,7 +56,7 @@ describe("LimeFlight QA challenge tests - contact form", () => {
         pricing.submitCheckErrorMessage(
           "form__Grid-sc-1y50ako-3",
           "lastName",
-          "Get Started"
+          "Get Started",
         );
       });
     });
@@ -74,7 +74,7 @@ describe("LimeFlight QA challenge tests - contact form", () => {
         pricing.submitCheckErrorMessage(
           "form__Grid-sc-1y50ako-3",
           "email",
-          "Get Started"
+          "Get Started",
         );
       });
     });
@@ -92,7 +92,7 @@ describe("LimeFlight QA challenge tests - contact form", () => {
         pricing.submitCheckErrorMessage(
           "form__Grid-sc-1y50ako-3",
           "company",
-          "Get Started"
+          "Get Started",
         );
       });
     });
@@ -105,58 +105,58 @@ describe("LimeFlight QA challenge tests - contact form", () => {
       pricing.selectModule(
         "form__Grid-sc-1y50ako-3",
         "Platform",
-        "not.be.checked"
+        "not.be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1y50ako-3",
         "LoadPlanning",
-        "not.be.checked"
+        "not.be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1y50ako-3",
         "MealPlanning",
-        "not.be.checked"
+        "not.be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1y50ako-3",
         "MobileApp",
-        "not.be.checked"
+        "not.be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1y50ako-3",
         "InventoryManagement",
-        "not.be.checked"
+        "not.be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1y50ako-3",
         "RouteOptimization",
-        "not.be.checked"
+        "not.be.checked",
       );
       pricing.selectModule("form__Grid-sc-1y50ako-3", "Platform", "be.checked");
       pricing.selectModule(
         "form__Grid-sc-1y50ako-3",
         "LoadPlanning",
-        "be.checked"
+        "be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1y50ako-3",
         "MealPlanning",
-        "be.checked"
+        "be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1y50ako-3",
         "MobileApp",
-        "be.checked"
+        "be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1y50ako-3",
         "InventoryManagement",
-        "be.checked"
+        "be.checked",
       );
       pricing.selectModule(
         "form__Grid-sc-1y50ako-3",
         "RouteOptimization",
-        "be.checked"
+        "be.checked",
       );
     });
     it("Validate checkbox for newsletters or offers in pricing form", () => {
