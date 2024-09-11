@@ -6,7 +6,7 @@
   "scripts": {
     "all": "npx cypress run --browser chrome",
     "contactForm": "npx cypress run --browser chrome --spec 'cypress/e2e/contactForm.cy.ts'",
-    "pricingForm": "npx cypress run --browser chrome --spec 'cypress/e2e/pricingForm.cy.ts'",
+    "pricingForm": "NO_COLOR=1 npx cypress run --browser chrome --spec 'cypress/e2e/pricingForm.cy.ts'",
     "prepare": "husky",
     "prettier:write": "prettier --write .",
     "prettier:check": "prettier --check ./"
